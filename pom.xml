@@ -70,6 +70,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>trakker</finalName>
 		<plugins>
 			<plugin>
 				<groupId>io.quarkus</groupId>
@@ -107,6 +108,7 @@
 				</property>
 			</activation>
 			<build>
+				<finalName>trakker</finalName>
 				<plugins>
 					<plugin>
 						<artifactId>maven-failsafe-plugin</artifactId>
