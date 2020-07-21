@@ -7,18 +7,18 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.native -t quarkus/gtserver .
+# docker build -f src/main/docker/Dockerfile.native -t eahollin/trakker .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 quarkus/gtserver
+# docker run -i --rm -p 8090:8090 eahollin/trakker
 #
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.1
 WORKDIR /work/
 COPY --chown=1001:root target/*-runner /work/application
 
-EXPOSE 8080
+EXPOSE 8090
 USER 1001
 
 CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
